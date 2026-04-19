@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Somewhere</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
       * {
         margin: 0;
@@ -9,24 +10,25 @@
         box-sizing: border-box;
       }
 
-      html,
       body {
-        width: 100%;
-        height: 100%;
         background: #000;
-      }
-
-      .container {
-        width: 100vw;
-        height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 480px; /* biar pas di HP */
+        aspect-ratio: 9 / 16; /* sesuai 720x1016 */
+        overflow: hidden;
       }
 
       img {
-        height: 100vh;
-        width: auto;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* isi penuh tanpa distorsi */
       }
     </style>
   </head>
